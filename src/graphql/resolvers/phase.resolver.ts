@@ -28,8 +28,11 @@ const getPhaseTasks = (parent: PhaseNode) => {
   return db.tasks.filter((t) => t.phaseId === parent.id);
 };
 
-const createPhase = (obj: any, { name, order }: Pick<PhaseEntry, 'name' | 'order'>): PhaseEntry => {
-  const phase = { id: uuidv4(), name, order };
+const createPhase = (
+  obj: any,
+  { name, executionOrder }: Pick<PhaseEntry, 'name' | 'executionOrder'>
+): PhaseEntry => {
+  const phase = { id: uuidv4(), name, executionOrder };
   db.phases.push(phase);
   return phase;
 };

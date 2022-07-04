@@ -1,5 +1,6 @@
 import { DataBase } from './types';
 
+// initial data to make it easy to test
 const db: DataBase = {
   startups: [
     {
@@ -8,9 +9,9 @@ const db: DataBase = {
     },
   ],
   phases: [
-    { id: 'fe34136d-b6a0-4574-9d67-2b0bfd168d1a', name: 'Foundation', order: 1 },
-    { id: '8700802a-dcb2-49ea-9287-1e3678c056af', name: 'Discovery', order: 2 },
-    { id: '2f2ceceb-7656-444b-9b7f-cea14164d2bd', name: 'Delivery', order: 3 },
+    { id: 'fe34136d-b6a0-4574-9d67-2b0bfd168d1a', name: 'Foundation', executionOrder: 1 },
+    { id: '8700802a-dcb2-49ea-9287-1e3678c056af', name: 'Discovery', executionOrder: 2 },
+    { id: '2f2ceceb-7656-444b-9b7f-cea14164d2bd', name: 'Delivery', executionOrder: 3 },
   ],
   tasks: [
     {
@@ -63,22 +64,22 @@ const db: DataBase = {
     {
       startupId: '509aa7e1-411d-4a1f-ac65-c9536bb36043',
       taskId: '3c7ebc54-520c-4731-9632-0f03556da072',
-      completed: true,
+      completed: false,
     },
     {
       startupId: '509aa7e1-411d-4a1f-ac65-c9536bb36043',
       taskId: 'c1415062-4387-48ed-b140-621c72d1e7df',
-      completed: true,
+      completed: false,
     },
     {
       startupId: '509aa7e1-411d-4a1f-ac65-c9536bb36043',
       taskId: '3f386df7-38df-4ed9-857d-d9ed32c71375',
-      completed: true,
+      completed: false,
     },
     {
       startupId: '509aa7e1-411d-4a1f-ac65-c9536bb36043',
       taskId: '078278b8-f993-46f8-a375-a77c0c58b94a',
-      completed: true,
+      completed: false,
     },
     {
       startupId: '509aa7e1-411d-4a1f-ac65-c9536bb36043',

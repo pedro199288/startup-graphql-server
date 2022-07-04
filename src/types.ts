@@ -27,7 +27,7 @@ export type StartupNode = GraphqlNode<null> & Startup;
 // Phase
 export type PhaseEntry = IdEntry & {
   name: string;
-  order: number;
+  executionOrder: number;
 };
 export type Phase = PhaseEntry & {
   startupId?: string;

@@ -8,7 +8,7 @@ import {
 } from './graphql/resolvers';
 import { mergeResolvers } from '@graphql-tools/merge';
 
-// TODO: implement proper error handling for resolvers (check not found errors, format errors, etc.)
+// TODO: implement proper error handling for resolvers (check not found errors, format errors, etc...)
 const resolvers = mergeResolvers([
   startupResolvers,
   phaseResolvers,

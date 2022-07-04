@@ -5,7 +5,6 @@ const typeDefs = gql`
   type Startup {
     id: ID!
     name: String!
-    # tasks: [Task!]!
     phases: [Phase!]!
     # ... more fields to describe startup, created_at, updated_at, etc.
   }
@@ -14,7 +13,7 @@ const typeDefs = gql`
     id: ID!
     startupId: ID
     name: String!
-    order: Int!
+    executionOrder: Int!
     tasks: [Task!]!
     # ... more fields to describe phase, created_at, updated_at, etc.
   }
@@ -48,7 +47,7 @@ const typeDefs = gql`
 
   type Mutation {
     createStartup(name: String!): Startup
-    createPhase(name: String!, order: Int!): Phase
+    createPhase(name: String!, executionOrder: Int!): Phase
     createTask(title: String!, phaseId: ID!): Task
     linkTaskToStartup(startupId: ID!, taskId: ID!): StartupTaskCompletion
     # TODO: addNewTaskToStartup that wouuld admit a TaskInput and startupId

@@ -20,7 +20,7 @@ const getTaskWithCompletionAndOrder = (startupId: string) =>
     return {
       ...t,
       // TODO: do a proper check of existence instead of use non-null assertion
-      phaseOrder: db.phases.find((p) => p.id === t.phaseId)?.order!,
+      phaseOrder: db.phases.find((p) => p.id === t.phaseId)?.executionOrder!,
       completed:
         db.startupTaskCompletions.find((sTC) => sTC.taskId === t.id && sTC.startupId === startupId)
           ?.completed ?? false,
